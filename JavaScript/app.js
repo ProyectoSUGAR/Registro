@@ -107,15 +107,5 @@ document.addEventListener("DOMContentLoaded", () => {
       timer: 3000,
       showConfirmButton: false
     });
-
-    // mensaje adicional con cantidad de vocales en el nombre
-    const vocales = contarVocales(nombre);
-    Swal.fire({
-      icon: "info",
-      title: "nombre",
-      text: `tu nombre tiene ${vocales} vocales`,
-      timer: 3500,
-      showConfirmButton: false
-    });
   });
 });
