@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>S.U.G.A.R.</title>
+    
+<!-- se enlaza la hoja de estilos externa -->
+<link rel="stylesheet" href="/Registro/Css/style.css" />
+
+<!-- ícono de la pestaña del navegador -->
+<link rel="icon" href="/Registro/imagenes/Logo22-removebg-preview.png" />
+
+<!-- librería de íconos font awesome desde cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- librería sweetalert2 desde cdn para usar alertas personalizadas -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+<!-- contenedor que agrupa todo el contenido de la página -->
+<div class="contenedor-principal">
+
+    <!-- cabecera -->
+    <header class="cabecera-institucional">
+
+    <!-- logo ubicado a la izquierda -->
+    <img src="/Registro/imagenes/Logo22-removebg-preview.png" alt="Logo" class="logo-app" />
+
+    <!-- título -->
+    <h1 class="titulo-cabecera">S.U.G.A.R.</h1>
+    </header>
+
+    <!-- área de contenido principal de la página -->
+    <main class="contenido-principal">
+
+    <!-- sección del formulario de registro -->
+    <section class="panel-formulario">
+
+        <!-- grupo de botones para cambiar entre pestañas -->
+        <div class="grupo-pestanas">
+
+        <!-- pestaña activa seleccionada por defecto en registro -->
+        <button class="pestana-activa">Registrarse</button>
+
+        <!-- pestaña inactiva para ir al login -->
+        <button class="pestana-inactiva">Ingresar</button>
+        </div>
+
+        <!-- formulario de registro -->
+        <form id="formulario" class="formulario-registro">
+
+        <!-- grupo de dos campos en línea: nombre y apellido -->
+        <div class="grupo-doble-campo">
+
+            <!-- campo de entrada para el nombre con ícono -->
+            <div class="campo-con-icono">
+            <input type="text" placeholder="Nombre" id="nombre" required />
+            <i class="fas fa-user"></i> <!-- icono de usuario -->
+            </div>
+
+            <!-- campo para el apellido -->
+            <div class="campo-con-icono">
+            <input type="text" placeholder="Apellido" id="apellido" required />
+            <i class="fas fa-user"></i> <!-- icono de usuario -->
+            </div>
+        </div>
+
+        <!-- campo para ingresar el correo electrónico -->
+        <div class="campo-con-icono">
+            <input type="text" placeholder="Email" id="email" required />
+            <i class="fas fa-envelope"></i> <!-- ícono de sobre (email) -->
+        </div>
+
+        <!-- campo para ingresar la contraseña -->
+        <div class="campo-con-icono">
+            <input type="password" placeholder="Contraseña" id="password" required />
+            <i class="fas fa-lock"></i> <!-- ícono de candado -->
+        </div>
+
+        <!-- campo para confirmar la contraseña -->
+        <div class="campo-con-icono">
+            <input type="password" placeholder="Confirmación" id="confirmaPassword" required />
+            <i class="fas fa-lock"></i> <!-- ícono de candado -->
+        </div>
+
+        <!-- campo para ingresar la edad -->
+        <div class="campo-con-icono">
+            <input type="number" placeholder="Edad" id="edad" required />
+            <i class="fas fa-calendar"></i> <!-- ícono de calendario -->
+        </div>
+
+        <!-- campo de selección para elegir el tipo de usuario -->
+        <div class="campo-con-icono">
+            <select id="tipoUsuario" required>
+            <option value="">Tipo de usuario</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="funcionario">Funcionario</option>
+            <option value="docente">Docente</option>
+            <option value="adscripta">Adscripta</option>
+            <option value="secretaria">Secretaría</option>
+            <option value="direccion">Dirección</option>
+            <option value="administrador">Administrador</option>
+            </select>
+            <i class="fas fa-chevron-down"></i> <!-- ícono de flecha desplegable -->
+        </div>
+
+        <!-- contenedor donde se mostrarán mensajes de error con javascript -->
+        <div id="alertaContenedor"></div>
+
+        <!-- botón para enviar el formulario -->
+        <button type="submit" class="btn-primario">Registrarse</button>
+        </form>
+    </section>
+
+    <!-- sección derecha con imagen y texto (carrusel institucional) -->
+    <section class="panel-carrusel">
+        <div class="carrusel">
+
+        <!-- imagen institucional dentro del carrusel -->
+        <img src="/Registro/imagenes/fondo.png" alt="Imagen institucional" class="imagen-carrusel" />
+
+        <!-- texto que acompaña a la imagen del carrusel -->
+        <div class="texto-carrusel">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciati.
+        </div>
+
+        <!-- botón para mover el carrusel hacia la izquierda -->
+        <button class="flecha-carrusel izquierda">&lt;</button>
+
+        <!-- botón para mover el carrusel hacia la derecha -->
+        <button class="flecha-carrusel derecha">&gt;</button>
+        </div>
+    </section>
+
+    </main> <!-- fin del contenido principal -->
+</div> <!-- fin del contenedor principal -->
+
+<!-- se enlaza el archivo javascript externo -->
+<script src="/Registro/JavaScript/app.js"></script>
+</body>
+</html>

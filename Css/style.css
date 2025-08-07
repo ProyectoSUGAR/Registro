@@ -1,0 +1,317 @@
+/* importa la fuente 'nunito sans' desde google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* reinicia margen, padding y box-sizing para todos los elementos */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* incluye padding y border dentro del ancho/alto */
+}
+
+/* estilo para el body (cuerpo de la página) */
+body {
+font-family: 'segoe ui', sans-serif; /* fuente principal */
+background: url('/Registro/imagenes/fondo.png') no-repeat center center fixed; /* imagen de fondo fija */
+background-size: cover; /* la imagen cubre todo el fondo */
+overflow: hidden; /* evita scroll */
+color: #071739; /* color del texto principal */
+height: 100vh; /* altura igual a la ventana visible */
+}
+
+/* contenedor principal que agrupa todo */
+.contenedor-principal {
+display: flex; /* usa flexbox */
+flex-direction: column; /* dirección vertical */
+height: 100vh; /* altura completa de la ventana */
+}
+
+/* cabecera de la página */
+.cabecera-institucional {
+display: flex; /* flexbox para alinear elementos */
+align-items: center; /* centra verticalmente */
+justify-content: center; /* centra horizontalmente */
+background: linear-gradient(90deg, #e3c39d 0%, #ffffff 62%, #071739 100%); /* degradado horizontal */
+padding: 1rem 0; /* espacio arriba y abajo */
+position: relative; /* para posicionar logo absolut */
+font-family: "nunito sans", sans-serif; /* fuente específica */
+}
+
+/* logo dentro de la cabecera */
+.logo-app {
+position: absolute; /* posición absoluta */
+left: 1rem; /* separado 1 rem del borde izquierdo */
+width: 40px; /* tamaño fijo */
+}
+
+/* título en la cabecera */
+.titulo-cabecera {
+font-size: 2rem; /* tamaño de texto grande */
+letter-spacing: 0.2rem; /* espacio entre letras */
+color: #071739; /* color del texto */
+}
+
+/* contenido principal debajo de la cabecera */
+.contenido-principal {
+display: flex; /* flexbox para distribución */
+align-items: center; /* centra verticalmente */
+height: 100%; /* ocupa todo el alto del contenedor */
+gap: 2rem; /* separación entre elementos hijos */
+padding: 1rem 2rem; /* espacio interno */
+overflow: hidden; /* evita scroll interno */
+justify-content: flex-start; /* alinea al inicio (izquierda) */
+}
+
+/* panel que contiene el formulario */
+.panel-formulario {
+background-color: #486382; /* fondo azul grisáceo */
+border-radius: 20px; /* bordes redondeados */
+padding: 2rem; /* espacio interno */
+width: 350px; /* ancho fijo */
+color: white; /* color de texto */
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* sombra para profundidad */
+display: flex; /* flexbox */
+flex-direction: column; /* columna vertical */
+margin-left: 1rem; /* margen izquierdo */
+}
+
+/* contenedor para las pestañas del formulario */
+.grupo-pestanas {
+display: flex; /* flexbox horizontal */
+justify-content: space-between; /* espacio entre botones */
+margin-bottom: 1.5rem; /* margen debajo */
+}
+
+/* estilos base para botones pestañas */
+.pestana-activa,
+.pestana-inactiva {
+background: none; /* sin fondo */
+border: none; /* sin borde */
+color: white; /* texto blanco */
+font-weight: bold; /* negrita */
+font-size: 1.1rem; /* tamaño letra */
+padding-bottom: 0.4rem; /* espacio abajo */
+border-bottom: 3px solid transparent; /* línea inferior invisible */
+cursor: pointer; /* cursor puntero */
+}
+
+/* pestaña activa tiene línea inferior visible */
+.pestana-activa {
+border-bottom: 3px solid #cdd5db;
+}
+
+/* formulario de registro */
+.formulario-registro {
+display: flex; /* flexbox */
+flex-direction: column; /* columna vertical */
+gap: 1rem; /* separación entre campos */
+}
+
+/* contenedor para dos campos lado a lado */
+.grupo-doble-campo {
+display: flex; /* flexbox horizontal */
+gap: 1rem; /* espacio entre campos */
+}
+
+/* contenedor para input con icono */
+.campo-con-icono {
+position: relative; /* para posicionar icono dentro */
+}
+
+/* estilo uniforme para inputs y selects dentro de campo-con-icono */
+.campo-con-icono input,
+.campo-con-icono select {
+width: 100%; /* ocupa todo el ancho */
+padding: 0.6rem 2rem 0.6rem 0.8rem; /* relleno, más espacio a la derecha para el icono */
+border-radius: 8px; /* bordes redondeados */
+border: none; /* sin borde */
+background-color: #cdd5db; /* fondo claro */
+color: #071739; /* texto oscuro */
+appearance: none; /* oculta flecha nativa de select */
+-webkit-appearance: none;
+-moz-appearance: none;
+}
+
+/* estilo para los iconos dentro del campo */
+.campo-con-icono i {
+position: absolute; /* posición absoluta respecto a contenedor */
+right: 0.7rem; /* separado de la derecha */
+top: 50%; /* centrado vertical */
+transform: translateY(-50%); /* ajusta para centrar exacto */
+color: #486382; /* color azul grisáceo */
+pointer-events: none; /* el icono no intercepta clics */
+}
+
+/* botón principal del formulario */
+.btn-primario {
+width: 100%; /* ancho completo */
+background-color: #071739; /* fondo azul oscuro */
+color: white; /* texto blanco */
+font-weight: bold; /* negrita */
+padding: 0.8rem; /* espacio interno */
+border: none; /* sin borde */
+border-radius: 8px; /* bordes redondeados */
+cursor: pointer; /* cursor puntero */
+transition: 0.3s; /* transición suave para hover */
+}
+
+/* estilo cuando se pasa el mouse sobre el botón */
+.btn-primario:hover {
+background-color: #a4b5c4; /* fondo más claro */
+color: #071739; /* texto azul oscuro */
+}
+
+/* contenedor del carrusel */
+.carrusel {
+width: 100%; /* ancho completo */
+height: 100%; /* alto completo */
+position: relative; /* para posicionar elementos internos */
+overflow: hidden; /* oculta desbordes */
+border-radius: inherit; /* hereda bordes redondeados del padre */
+}
+
+/* panel que contiene el carrusel */
+.panel-carrusel {
+width: 850px; /* ancho fijo */
+height: 430px; /* alto fijo */
+background: rgba(0, 0, 0, 0.5); /* fondo negro semi-transparente */
+border-radius: 20px; /* bordes redondeados */
+position: relative; /* para posicionar elementos */
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* sombra */
+margin-left: auto; /* se alinea a la derecha */
+}
+
+/* imagen dentro del carrusel */
+.imagen-carrusel {
+width: 100%; /* ancho completo */
+height: 100%; /* alto completo */
+object-fit: cover; /* la imagen cubre sin deformarse */
+display: block; /* bloque para eliminar espacios */
+max-width: 100%; /* máximo ancho permitido */
+max-height: 100%; /* máximo alto permitido */
+border-radius: 0; /* sin bordes redondeados */
+}
+
+/* texto sobre la imagen del carrusel */
+.texto-carrusel {
+position: absolute; /* posición absoluta dentro del carrusel */
+bottom: 0; /* pegado abajo */
+background: rgba(0, 0, 0, 0.4); /* fondo negro semi-transparente */
+color: white; /* texto blanco */
+padding: 1rem; /* espacio interno */
+font-size: 1.1rem; /* tamaño del texto */
+width: 100%; /* ocupa todo el ancho */
+}
+
+/* botones para controlar el carrusel */
+.flecha-carrusel {
+position: absolute; /* posición absoluta */
+top: 50%; /* centrado vertical */
+transform: translateY(-50%); /* ajusta para centrar exactamente */
+background: rgba(0, 0, 0, 0.3); /* fondo negro transparente */
+color: #e3c39d; /* color amarillo claro */
+font-size: 1.5rem; /* tamaño de la fuente */
+border: none; /* sin borde */
+padding: 0.5rem; /* relleno */
+cursor: pointer; /* cursor puntero */
+border-radius: 50%; /* botón redondo */
+}
+
+/* botón izquierdo del carrusel */
+.flecha-carrusel.izquierda {
+left: 10px; /* separado a 10px de la izquierda */
+}
+
+/* botón derecho del carrusel */
+.flecha-carrusel.derecha {
+right: 10px; /* separado a 10px de la derecha */
+}
+
+/* media queries para dispositivos móviles (pantallas menores a 480px) */
+@media (max-width: 480px) {
+.contenido-principal {
+flex-direction: column; /* cambia a columna */
+align-items: center; /* centra horizontalmente */
+padding: 1rem; /* padding reducido */
+}
+
+.panel-formulario,
+.panel-carrusel {
+width: 100%; /* ocupa todo el ancho posible */
+max-width: 320px; /* máximo ancho de 320px */
+}
+
+.grupo-doble-campo {
+flex-direction: column; /* apila verticalmente campos dobles */
+}
+
+.texto-carrusel {
+font-size: 0.9rem; /* texto más pequeño */
+}
+
+.flecha-carrusel {
+font-size: 1.2rem; /* flechas más pequeñas */
+}
+}
+
+/* media queries para tablets y pantallas medianas */
+@media (min-width: 481px) and (max-width: 768px) {
+.contenido-principal {
+flex-direction: column; /* columna */
+align-items: center; /* centrado horizontal */
+padding: 1.5rem; /* padding un poco mayor */
+}
+
+.panel-formulario,
+.panel-carrusel {
+width: 90%; /* ocupa el 90% del ancho */
+max-width: 400px; /* máximo ancho de 400px */
+}
+
+.grupo-doble-campo {
+flex-direction: column; /* campos apilados verticalmente */
+}
+
+.texto-carrusel {
+font-size: 1rem; /* texto tamaño medio */
+}
+}
+
+/* media queries para pantallas grandes medianas (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+.contenido-principal {
+flex-direction: row; /* vuelve a filas horizontales */
+justify-content: center; /* centra horizontalmente */
+padding: 2rem; /* padding mayor */
+gap: 2rem; /* espacio entre elementos */
+}
+
+.panel-formulario {
+width: 320px; /* ancho fijo */
+}
+
+.panel-carrusel {
+width: 500px; /* más ancho */
+height: 400px; /* altura menor */
+}
+
+.texto-carrusel {
+font-size: 1.1rem; /* tamaño de texto */
+}
+}
+
+/* media queries para pantallas grandes (1025px a 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+.panel-formulario {
+width: 340px; /* ancho fijo */
+}
+
+.panel-carrusel {
+width: 600px; /* más ancho */
+height: 430px; /* altura fija */
+}
+
+.contenido-principal {
+justify-content: space-between; /* separación máxima entre hijos */
+padding: 2rem 3rem; /* padding lateral */
+}
+}
